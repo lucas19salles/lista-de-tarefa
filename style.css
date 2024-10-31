@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #044b3f;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  height: 100vh;
+  margin: 10px auto;
+  padding-inline: 20px;
+}
+
+h1 {
+  margin-block: 40px 20px;
+  text-align: center;
+  color: #aaa9a9;
+}
+
+form {
+  display: flex;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  border: 2px solid #aaa9a9;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: #aaa9a9;
+}
+
+input::placeholder {
+  color: #aaa9a9;
+}
+
+button {
+  display: flex;
+  place-self: center;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #aaa9a9;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+  background-color: #888888; /* Efeito hover */
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+li + li {
+  margin-top: 14px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li a {
+  text-decoration: none;
+  background: #aaa9a9;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #000000;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease; /* Transição suave */
+}
+
+li a:hover {
+  background: #888888; /* Efeito hover */
+}
+
+.concluida {
+  text-decoration: line-through; /* Risca o texto */
+  color: gray; /* Muda a cor do texto */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem; /* Tamanho da fonte do título em telas menores */
+  }
+
+  input[type="text"] {
+    font-size: 1rem; /* Tamanho da fonte do input */
+  }
+
+  button {
+    font-size: 1rem; /* Tamanho da fonte do botão */
+  }
+
+  ul {
+    font-size: 1rem; /* Tamanho da fonte da lista */
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    flex-direction: column; /* Mantém a coluna em telas menores */
+  }
+
+  input[type="text"],
+  button {
+    width: 100%; /* Faz com que o input e o botão ocupem 100% da largura */
+  }
+
+  li {
+    flex-direction: column; /* Alinha os itens da lista em coluna */
+    gap: 10px;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  li a {
+    margin-top: 5px; /* Espaçamento entre o texto da tarefa e o link de exclusão */
+  }
+}
